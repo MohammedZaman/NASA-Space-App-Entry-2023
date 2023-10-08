@@ -210,11 +210,13 @@ function fail() {
 
 
 function loadTextFromURL(url) {
-    fetch(url)
-        .then(response => response.text())
-        .then(text => {
-            var divElement = document.getElementById("info");
-            divElement.innerHTML = `<code>${text}</code>`;
-        })
-        .catch(error => console.log(error));
+ fetch(url)
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('info').innerHTML = data;
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+
 }
