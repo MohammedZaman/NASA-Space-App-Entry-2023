@@ -214,7 +214,7 @@ function loadTextFromURL(url) {
         .then(response => response.text())
         .then(text => {
             var divElement = document.getElementById("info");
-            divElement.innerHTML = `<pre>${text}</pre>`;
+            divElement.innerHTML = `<code>${text}</code>`;
         })
         .catch(error => console.log(error));
 }
