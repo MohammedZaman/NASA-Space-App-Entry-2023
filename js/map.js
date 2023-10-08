@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Change the cursor style as a UI indicator.
             map.getCanvas().style.cursor = 'pointer';
             const coordinates = e.features[0].geometry.coordinates.slice();
-            const description = e.features[0].properties.temp;
+            let description = e.features[0].properties.temp
             while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
                 coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
             }
@@ -62,9 +62,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('tempBtn').addEventListener('click', () => {
         toggleLayer('tempBtn', 'temp');
     });
-    
-    
-     document.getElementById('chlorBtn').addEventListener('click', () => {
+
+
+    document.getElementById('chlorBtn').addEventListener('click', () => {
         toggleLayer('chlorBtn', 'chlor');
     });
 
@@ -79,44 +79,67 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             id: 'bristolBtn',
             center: [-4.185502, 51.365625],
-            zoom: 7
+            zoom: 7,
+            callback: () => {
+                loadTextFromURL("species_data/bristolchannel_endangered.html");
+            }
   },
         {
             id: 'engChBtn',
             center: [-1.481723, 50.120729],
-            zoom: 7
+            zoom: 7,
+            callback: () => {
+                loadTextFromURL("species_data/englishchannel_endangered.html");
+            }
   },
         {
             id: 'irishBtn',
             center: [-4.949417, 53.436333],
-            zoom: 7
+            zoom: 7,
+            callback: () => {
+                loadTextFromURL("species_data/irishsea_endangered.html");
+            }
   },
         {
             id: 'northBtn',
             center: [1.508330, 56.385996],
             zoom: 7,
             callback: () => {
-                loadTextFromURL("species_data/northsea.html");
+                loadTextFromURL("species_data/northsea_endangered.html");
             }
   },
         {
             id: 'northABtn',
             center: [-13.914583, 54.436156],
-            zoom: 7
+            zoom: 7,
+            callback: () => {
+                loadTextFromURL("species_data/atlanticocean_endangered.html");
+            }
   },
         {
             id: 'innerSBtn',
             center: [-6.798590, 57.082126],
-            zoom: 7
+            zoom: 7,
+            callback: () => {
+                loadTextFromURL("species_data/empty.html");
+            }
+
   },
         {
             id: 'ukBtn',
             center: [-3.767490, 53.711949],
-            zoom: 5
-  },    {
+            zoom: 5,
+            callback: () => {
+                loadTextFromURL("species_data/empty.html");
+            }
+
+  }, {
             id: 'celticBtn',
-            center: [50.085675,-8.664765],
-            zoom: 5
+            center: [50.085675, -8.664765],
+            zoom: 5,
+            callback: () => {
+                loadTextFromURL("species_data/celticsea_endangered.html");
+            }
   }
 ];
 

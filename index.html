@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Display a map on a webpage</title>
+    <title>NASA Space App 2023</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
 
@@ -18,7 +18,7 @@
 <body>
     <div class="row">
         <div class="col-12">
-            <h1 style="text-align: center;">NASA SPACE APPS 2023 </h1>
+            <h1 style="text-align: center;">NASA SPACE APPS 2023</h1>
         </div>
     </div>
     <div id="map-container">
@@ -26,7 +26,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12" style="margin-bottom: -40px;">
+        <div class="col-12" style="margin-bottom: -10px;">
             <div class="col-4">
 
             </div>
@@ -41,12 +41,6 @@
 
     </div>
     <div class="row">
-        <div class="col-12">
-            <h3>Challenge:</h3>
-            <p>An app that allows users to check the water quality of their waterways and to learn what endangered species are living in the water as well as how to protect them. </p>
-        </div>
-    </div>
-    <div class="row">
         <div class="col-4" style="border: solid white 1px;">
             <h3>Body of water to explore: </h3>
             <button class="custom-btn btn-3" id="bristolBtn"><span>Bristol Channel</span></button>
@@ -59,11 +53,13 @@
             <button class="custom-btn btn-3" ><span>UK
                 
                 </span></button>
-             <button class="custom-btn btn-3" ><span>Inner Sea</span></button>
-             <button class="custom-btn btn-3" style="display:none;"><span>Celtic Sea</span></button>
+             <button class="custom-btn btn-3" id="celticBtn" ><span>Celtic Sea</span></button>
             
             <h3>Tempreture Controls</h3>
             <button class="custom-btn btn-3" id="tempBtn"><span>Turn off</span></button>
+            
+            <h3>Chlorophyll Controls</h3>
+            <button class="custom-btn btn-3" id="chlorBtn"><span>Turn off</span></button>
         </div>
         <div class="col-4" style="border: solid white 1px;">
             <p class="col-8">Marine Conservation Zones</p>
@@ -87,8 +83,11 @@
 
         </div>
         <div class="col-4" style="border: solid white 1px;">
+            <p>Temperature units = Celsius (°C) </p>
+            <p>Chlorophyll units = mg/m^3 </p>
+            
             <h3>Endangered Species Found</h3>
-            <div id="info">Click on a body if water and we can give you info on the endangered species within that location</div>
+            <div id="info" style="word-wrap: break-word;">Click on a body if water and we can give you info on the endangered species within that location</div>
         </div>
     </div>
 
