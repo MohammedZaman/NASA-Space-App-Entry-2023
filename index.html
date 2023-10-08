@@ -25,47 +25,76 @@
         <div id="map">
         </div>
     </div>
-
-
     <div class="row">
+        <div class="col-12" style="margin-bottom: -40px;">
+            <div class="col-4">
 
+            </div>
+            <div class="col-4">
+                <h3 class="col-6" id="long"></h3>
+                <h3 class="col-6" id="lat"></h3>
+            </div>
+            <div class="col-4">
+
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
         <div class="col-12">
             <h3>Challenge:</h3>
             <p>An app that allows users to check the water quality of their waterways and to learn what endangered species are living in the water as well as how to protect them. </p>
         </div>
-
-
     </div>
-
-
     <div class="row">
-
         <div class="col-4" style="border: solid white 1px;">
             <h3>Body of water to explore: </h3>
-            <button class="custom-btn btn-3"><span>Bristol Channel</span></button>
-            <button class="custom-btn btn-3"><span>English Channel</span></button>
-            <button class="custom-btn btn-3"><span>Irish Sea</span></button>
+            <button class="custom-btn btn-3" id="bristolBtn"><span>Bristol Channel</span></button>
+            <button class="custom-btn btn-3" id="engChBtn"><span>English Channel</span></button>
+            <button class="custom-btn btn-3" id="irishBtn"><span>Irish Sea</span></button>
+            <button class="custom-btn btn-3" id="northBtn"><span>North Sea</span></button>
+            <button class="custom-btn btn-3" id="northABtn"><span>North Atlantic Sea</span></button>
+            <button class="custom-btn btn-3" id="innerSBtn"><span>Inner Sea</span></button>
+
+            <button class="custom-btn btn-3" ><span>UK
+                
+                </span></button>
+             <button class="custom-btn btn-3" ><span>Inner Sea</span></button>
+             <button class="custom-btn btn-3" style="display:none;"><span>Celtic Sea</span></button>
+            
+            <h3>Tempreture Controls</h3>
+            <button class="custom-btn btn-3" id="tempBtn"><span>Turn off</span></button>
         </div>
         <div class="col-4" style="border: solid white 1px;">
-            <h3>Endangered Marine Life</h3>
+            <p class="col-8">Marine Conservation Zones</p>
+            <div class="col-4"> <button style="width:auto;padding: 5px;" class="custom-btn btn-3" id="showMBtn">Turn Off</button></div>
+
+
+            <p style="color:yellow;"><b>What are Marine Conservation Zones?</b></p>
+            <p>Marine Conservation Zones are areas that protect a range of nationally important, rare or threatened habitats and species.</p>
+
+
+            <p>In a marine conservation area, visitors should follow these guidelines to protect the marine ecosystem:</p>
             <ul>
+                <li>Avoid fishing.</li>
+                <li>Do not dump waste or litter.</li>
+                <li>Avoid anchoring in sensitive areas.</li>
+                <li>Respect marine life and their habitats.</li>
+                <li>Obtain necessary permits or licenses for collecting marine organisms.</li>
+                <li>Follow restrictions on motorized watercraft.</li>
             </ul>
+            <p>By following these guidelines, we can ensure the preservation and sustainability of marine ecosystems in the conservation area.</p>
+
         </div>
         <div class="col-4" style="border: solid white 1px;">
-            <h3>Chemical in the water</h3>
+            <h3>Endangered Species Found</h3>
+            <div id="info">Click on a body if water and we can give you info on the endangered species within that location</div>
         </div>
     </div>
 
 
 
-    <div class="row">
-        <div class="col-3" style="float: right">
-            <div class="col-6">
-                <h3>Made By<br>Spicy Space Spagetti</h3>
-            </div>
-            <img class="col-6" style="height:150px; width:150px;padding:20px" src="img/spicy.png">
-        </div>
-    </div>
+
 </body>
 
 </html>
