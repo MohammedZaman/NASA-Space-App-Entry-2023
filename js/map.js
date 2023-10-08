@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }, {
             id: 'celticBtn',
-            center: [50.085675, -8.664765],
+            center: [-7.937767, 50.647646],
             zoom: 5,
             callback: () => {
                 loadTextFromURL("species_data/celticsea_endangered.html");
@@ -210,13 +210,13 @@ function fail() {
 
 
 function loadTextFromURL(url) {
- fetch(url)
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('info').innerHTML = data;
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
+    fetch(url)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('info').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 
 }
